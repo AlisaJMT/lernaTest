@@ -1,0 +1,29 @@
+{
+  "name": "@htyh/components",
+  "version": "1.0.0",
+  "description": "通用组件",
+  "author": "AlisaJMT <1473438030@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "./index.js",
+  "directories": {
+    "lib": "src",
+    "test": "__tests__"
+  },
+  "files": [
+    "src"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com"
+  },
+  "scripts": {
+    "test": "node ./__tests__/components.test.js"
+  },
+  "dependencies": {
+    "@htyh/utils": "workspace:^",
+    "element-ui": "^2.15.14",
+    "sass": "1.32.13",
+    "sass-loader": "10.1.1",
+    "vue": "^2.6.14"
+  }
+}

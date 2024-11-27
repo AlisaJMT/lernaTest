@@ -1,17 +1,35 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+    <pagination
+      v-show="total>0"
+      :total="total"
+      :page.sync="queryParams.pageNum"
+      :limit.sync="queryParams.pageSize"
+      @pagination="getList"
+    /> 
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { parseTime } from "@htyh/utils"
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data(){
+    return {
+      queryParams:{
+        pageNum:1,
+        pageSize:10
+      },
+      total:21
+    }
+  },
+  created(){
+    console.log(parseTime,'--')
+  },
+  methods:{
+    getList(){}
   }
 }
 </script>
